@@ -1,6 +1,6 @@
 {
   "name": "react-native-scuttlebot",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Secure Scuttlebutt peer for React Native apps",
   "author": "Andre Staltz",
   "license": "MIT",

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "target": "es2016",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "outDir": "./lib/",
+    "lib": ["es2015"]
+  },
+  "files": ["src/index.ts"]
+}

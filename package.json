@@ -1,0 +1,39 @@
+{
+  "name": "react-native-scuttlebot",
+  "version": "1.0.0",
+  "description": "Secure Scuttlebutt peer for React Native apps",
+  "author": "Andre Staltz",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "bin": "bin.js",
+  "typings": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ssbc/react-native-scuttlebot.git"
+  },
+  "scripts": {
+    "compile": "tsc",
+    "prepublishOnly": "npm run compile",
+    "install": "node patch-scuttlebot.js && cd ../../ && react-native link react-native-node"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.9",
+    "typescript": "^2.4.1"
+  },
+  "dependencies": {
+    "spawn-sync": "1.0.15",
+    "try-thread-sleep": "^1.0.2",
+    "bufferutil": "3.0.1",
+    "memdown": "1.2.4",
+    "noderify": "3.0.1",
+    "path": "0.12.7",
+    "pull-identify-filetype": "1.1.0",
+    "react-native-node": "^1.0.1",
+    "scuttlebot": "10.3.1",
+    "sodium-browserify-tweetnacl": "0.2.3",
+    "ssb-friends": "^2.1.0",
+    "ssb-keys": "7.0.10",
+    "utf-8-validate": "3.0.2",
+    "yargs": "8.0.2"
+  }
+}

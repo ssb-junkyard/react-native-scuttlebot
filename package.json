@@ -5,7 +5,6 @@
   "author": "Andre Staltz",
   "license": "MIT",
   "main": "lib/index.js",
-  "bin": "bin.js",
   "typings": "lib/index.d.ts",
   "repository": {
     "type": "git",
@@ -14,7 +13,7 @@
   "scripts": {
     "compile": "tsc",
     "prepublishOnly": "npm run compile",
-    "install": "node patch-scuttlebot.js && cd ../../ && react-native link react-native-node"
+    "install": "node patch-scuttlebot.js && node insert-bundle.js && cd ../../ && react-native link react-native-node"
   },
   "devDependencies": {
     "@types/node": "^8.0.9",

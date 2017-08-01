@@ -19,4 +19,4 @@ Scuttlebot.start();
 
 ### versions
 
-If this package is version A.B.C, then it uses `scuttlebot@A.B.C`.
+If this package is version A.B.C, then it uses `scuttlebot@A.B.x`.

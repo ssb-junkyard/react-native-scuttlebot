@@ -58,12 +58,11 @@ var manifest = {
     changes: "source",
     reconnect: "sync"
   },
-  // friends: {
-  //   all: "async",
-  //   hops: "async",
-  //   createFriendStream: "source",
-  //   get: "sync"
-  // },
+  friends: {
+    get: "async",
+    createFriendStream: "source",
+    hops: "async"
+  },
   replicate: {
     changes: "source",
     upto: "source"
@@ -82,6 +81,20 @@ var manifest = {
     changes: "source",
     createWants: "source"
   },
+  backlinks: {
+    read: "source"
+  },
+  about: {
+    stream: "source",
+    get: "async"
+  },
+  contacts: {
+    stream: "source",
+    get: "async"
+  },
+  query: {
+    read: "source"
+  },
   invite: {
     create: "async",
     accept: "async",
@@ -92,7 +105,8 @@ var manifest = {
   },
   private: {
     publish: "async",
-    unbox: "sync"
+    unbox: "sync",
+    read: "source"
   }
 };
 

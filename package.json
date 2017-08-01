@@ -28,9 +28,9 @@
     "path": "0.12.7",
     "pull-identify-filetype": "1.1.0",
     "react-native-node": "^1.0.1",
-    "scuttlebot": "10.3.1",
+    "scuttlebot": "10.4.4",
     "sodium-browserify-tweetnacl": "0.2.3",
-    "ssb-friends": "^2.1.0",
+    "ssb-friends": "^2.2.1",
     "ssb-keys": "7.0.10",
     "utf-8-validate": "3.0.2",
     "yargs": "8.0.2"

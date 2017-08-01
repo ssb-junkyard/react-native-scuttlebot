@@ -111,8 +111,7 @@ var createSbot = require("scuttlebot/index")
   .use(require("scuttlebot/plugins/invite"))
   .use(require("scuttlebot/plugins/block"))
   .use(require("scuttlebot/plugins/local"))
-  .use(require("scuttlebot/plugins/logging"))
-  .use(require("scuttlebot/plugins/private"));
+  .use(require("scuttlebot/plugins/logging"));
 
 // add third-party plugins
 require("scuttlebot/plugins/plugins").loadUserPlugins(createSbot, config);

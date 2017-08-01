@@ -32,6 +32,10 @@
     "sodium-browserify-tweetnacl": "0.2.3",
     "ssb-friends": "^2.2.1",
     "ssb-backlinks": "0.4.x",
+    "ssb-private": "0.1.x",
+    "ssb-about": "0.1.x",
+    "ssb-contacts": "0.0.x",
+    "ssb-query": "0.1.x",
     "ssb-keys": "7.0.10",
     "utf-8-validate": "3.0.2",
     "yargs": "8.0.2"

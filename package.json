@@ -27,7 +27,7 @@
     "noderify": "3.0.2",
     "path": "0.12.7",
     "pull-identify-filetype": "1.1.0",
-    "react-native-node": "^1.0.1",
+    "react-native-node": "1.1.2",
     "scuttlebot": "10.4.4",
     "sodium-browserify-tweetnacl": "0.2.3",
     "ssb-friends": "^2.2.1",

@@ -20,8 +20,6 @@
     "typescript": "^2.4.1"
   },
   "dependencies": {
-    "spawn-sync": "1.0.15",
-    "try-thread-sleep": "^1.0.2",
     "bufferutil": "3.0.1",
     "memdown": "1.2.4",
     "noderify": "3.0.2",
@@ -30,13 +28,15 @@
     "react-native-node": "2.0.0",
     "scuttlebot": "10.4.4",
     "sodium-browserify-tweetnacl": "0.2.3",
-    "ssb-friends": "^2.2.1",
-    "ssb-backlinks": "0.4.x",
-    "ssb-private": "0.1.x",
+    "spawn-sync": "1.0.15",
     "ssb-about": "0.1.x",
+    "ssb-backlinks": "0.4.x",
     "ssb-contacts": "0.0.x",
-    "ssb-query": "0.1.x",
+    "ssb-friends": "^2.2.1",
     "ssb-keys": "7.0.10",
+    "ssb-private": "0.1.x",
+    "ssb-query": "0.1.x",
+    "try-thread-sleep": "^1.0.2",
     "utf-8-validate": "3.0.2",
     "yargs": "8.0.2"
   }

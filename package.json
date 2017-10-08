@@ -32,7 +32,7 @@
     "ssb-about": "0.1.x",
     "ssb-backlinks": "0.4.x",
     "ssb-contacts": "0.0.x",
-    "ssb-friends": "^2.2.1",
+    "ssb-friends": "^2.2.3",
     "ssb-keys": "7.0.10",
     "ssb-private": "0.1.x",
     "ssb-query": "0.1.x",

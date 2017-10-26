@@ -50,9 +50,9 @@ ajv@^4.9.1:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
 
-aligned-block-file@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/aligned-block-file/-/aligned-block-file-1.1.0.tgz#2f1ae53ca60994687bf6ffc5e7d703a7728926fc"
+aligned-block-file@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/aligned-block-file/-/aligned-block-file-1.1.2.tgz#4a9168d5fefe5e2f525949dc55a4aa09903b32d4"
   dependencies:
     hashlru "^2.1.0"
     int53 "^0.2.4"
@@ -146,6 +146,10 @@ async-each@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
 
+async-single@^1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/async-single/-/async-single-1.0.3.tgz#a156607ee42dd9dacfe81a290c983343fd536eab"
+
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
@@ -157,6 +161,10 @@ atomic-file@0.0.1:
 atomic-file@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/atomic-file/-/atomic-file-0.3.0.tgz#315c55247e4c0909a8a1f9c9d0c28ff221c8a799"
+
+atomic-file@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/atomic-file/-/atomic-file-1.1.3.tgz#21b3bc4ca3e888c4a3edfe1c38b4fd9be2544508"
 
 attach-ware@^1.0.0:
   version "1.1.1"
@@ -259,9 +267,9 @@ braces@^1.8.2:
     preserve "^0.2.0"
     repeat-element "^1.1.2"
 
-broadcast-stream@~0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/broadcast-stream/-/broadcast-stream-0.0.0.tgz#dcb3f0612296fe72096e25fe8665aec99865e1bf"
+broadcast-stream@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/broadcast-stream/-/broadcast-stream-0.2.1.tgz#8e4b5ad042d2dae0e4860e981db23e20cacf7aa0"
 
 browser-resolve@^1.7.0:
   version "1.11.2"
@@ -777,9 +785,9 @@ flumecodec@0.0.0:
   dependencies:
     level-codec "^6.2.0"
 
-flumedb@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/flumedb/-/flumedb-0.3.1.tgz#1341a61da9c1826f51c397effd62f0f38416f621"
+flumedb@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/flumedb/-/flumedb-0.4.2.tgz#6ea79016f3799242126b4b0eb029f1f3a1de5a85"
   dependencies:
     cont "^1.0.3"
     explain-error "^1.0.3"
@@ -787,18 +795,21 @@ flumedb@^0.3.1:
     pull-cont "0.0.0"
     pull-stream "^3.5.0"
 
-flumelog-offset@^3.0.2:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/flumelog-offset/-/flumelog-offset-3.0.3.tgz#75e67600f839f496e47682eeb9d1487310aecbd5"
+flumelog-offset@^3.2.2, flumelog-offset@^3.2.5:
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/flumelog-offset/-/flumelog-offset-3.2.6.tgz#4a97d5190a3581cc459e4278d5ace2daadcd7106"
   dependencies:
-    aligned-block-file "^1.0.0"
+    aligned-block-file "^1.1.2"
     append-batch "^0.0.1"
     explain-error "^1.0.3"
     hashlru "^2.2.0"
+    int53 "^0.2.4"
     looper "^4.0.0"
     ltgt "^2.1.3"
     obv "0.0.1"
     pull-cursor "^2.1.2"
+    pull-looper "^1.0.0"
+    uint48be "^1.0.1"
 
 flumeview-level@^1.0.3:
   version "1.0.3"
@@ -813,23 +824,24 @@ flumeview-level@^1.0.3:
     pull-stream "^3.5.0"
     pull-write "^1.1.1"
 
-flumeview-level@^2.0.1:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/flumeview-level/-/flumeview-level-2.0.3.tgz#dadbffe13c9c813f12b076c59e7b35f1992132e1"
+flumeview-level@^2.0.2, flumeview-level@^2.0.3:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/flumeview-level/-/flumeview-level-2.0.5.tgz#096ee9e3349f4b75e3ade6c40c9f18591794ef8a"
   dependencies:
     bytewise "^1.1.0"
     explain-error "^1.0.4"
     level "^1.7.0"
     ltgt "^2.1.3"
+    mkdirp "^0.5.1"
     obv "0.0.0"
     pull-level "^2.0.3"
     pull-paramap "^1.2.1"
     pull-stream "^3.5.0"
     pull-write "^1.1.1"
 
-flumeview-level@^2.0.2, flumeview-level@^2.0.3:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/flumeview-level/-/flumeview-level-2.0.5.tgz#096ee9e3349f4b75e3ade6c40c9f18591794ef8a"
+flumeview-level@^2.0.5:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/flumeview-level/-/flumeview-level-2.1.0.tgz#46881117d8b2c60d4260405ceb7a18fbad26e2ce"
   dependencies:
     bytewise "^1.1.0"
     explain-error "^1.0.4"
@@ -854,11 +866,23 @@ flumeview-query@^3.0.0, flumeview-query@^3.0.3:
     pull-sink-through "0.0.0"
     pull-stream "^3.4.0"
 
-flumeview-reduce@^1.0.4, flumeview-reduce@^1.1.0, flumeview-reduce@^1.3.0:
+flumeview-reduce@^1.1.0, flumeview-reduce@^1.3.0:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/flumeview-reduce/-/flumeview-reduce-1.3.2.tgz#ff74d7908e62c8c7d16368f0fc74477156254a56"
   dependencies:
     atomic-file "^0.3.0"
+    deep-equal "^1.0.1"
+    flumecodec "0.0.0"
+    obv "0.0.0"
+    pull-notify "^0.1.1"
+    pull-stream "^3.5.0"
+
+flumeview-reduce@^1.3.6:
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/flumeview-reduce/-/flumeview-reduce-1.3.7.tgz#0da34e36dbeea9944e2fe8693568fb1d6c52b57f"
+  dependencies:
+    async-single "^1.0.2"
+    atomic-file "^1.1.3"
     deep-equal "^1.0.1"
     flumecodec "0.0.0"
     obv "0.0.0"
@@ -2276,6 +2300,12 @@ pull-live@^1.0.0, pull-live@^1.0.1:
     pull-cat "^1.1.9"
     pull-stream "^3.4.0"
 
+pull-looper@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/pull-looper/-/pull-looper-1.0.0.tgz#d128b88ada3b16412c6242c4a9b429fa88e97e8e"
+  dependencies:
+    looper "^4.0.0"
+
 pull-many@~1.0.6:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/pull-many/-/pull-many-1.0.8.tgz#3dadd9b6d156c545721bda8d0003dd8eaa06293e"
@@ -2459,9 +2489,9 @@ rc@~0.5.4:
     minimist "~0.0.7"
     strip-json-comments "0.1.x"
 
-react-native-node@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-node/-/react-native-node-2.0.0.tgz#9001ed8c6a18201539d8d56c2521d2fcdc171230"
+react-native-node@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-node/-/react-native-node-3.0.0.tgz#0783a28936bd595d72fbb9ec9b19b99d7b65e19e"
   dependencies:
     cheerio "^1.0.0-rc.1"
     mkdirp "^0.5.1"
@@ -2674,17 +2704,18 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
-scuttlebot@10.4.4:
-  version "10.4.4"
-  resolved "https://registry.yarnpkg.com/scuttlebot/-/scuttlebot-10.4.4.tgz#c174dee9438e6a094930235bc219d3aa076fd276"
+scuttlebot@10.4.10:
+  version "10.4.10"
+  resolved "https://registry.yarnpkg.com/scuttlebot/-/scuttlebot-10.4.10.tgz#4c2d53243ccf44d8030cd8270bab2f0ea754d87e"
   dependencies:
     atomic-file "0.0.1"
     bash-color "~0.0.3"
-    broadcast-stream "~0.0.0"
+    broadcast-stream "^0.2.1"
     cont "~1.0.3"
     cross-spawn "^5.1.0"
     deep-equal "^1.0.1"
     explain-error "^1.0.3"
+    flumelog-offset "^3.2.2"
     flumeview-reduce "^1.1.0"
     graphreduce "^3.0.2"
     has-network "0.0.1"
@@ -2701,6 +2732,7 @@ scuttlebot@10.4.4:
     mv "^2.1.1"
     non-private-ip "~1.1.0"
     observ-debounce "^1.1.1"
+    obv "0.0.1"
     on-change-network "0.0.2"
     on-wakeup "^1.0.0"
     osenv "^0.1.3"
@@ -2721,11 +2753,11 @@ scuttlebot@10.4.4:
     pull-stringify "~1.2.2"
     rimraf "^2.4.2"
     secret-stack "^4.0.0"
-    secure-scuttlebutt "^16.3.2"
+    secure-scuttlebutt "^16.3.8"
     ssb-blobs "^1.0.1"
     ssb-client "^4.4.1"
     ssb-config "^2.0.0"
-    ssb-friends "^2.2.1"
+    ssb-friends "^2.2.3"
     ssb-keys "^7.0.0"
     ssb-links "^3.0.0"
     ssb-msgs "~5.2.0"
@@ -2761,18 +2793,18 @@ secret-stack@^4.0.0:
     pull-stream "^3.4.5"
     stream-to-pull-stream "^1.6.1"
 
-secure-scuttlebutt@^16.3.2:
-  version "16.3.7"
-  resolved "https://registry.yarnpkg.com/secure-scuttlebutt/-/secure-scuttlebutt-16.3.7.tgz#13cd6d804de07f77a480f0cc2c8e52728074187d"
+secure-scuttlebutt@^16.3.8:
+  version "16.3.8"
+  resolved "https://registry.yarnpkg.com/secure-scuttlebutt/-/secure-scuttlebutt-16.3.8.tgz#2b1c2668b81dbd5126941cc8c2bf6bdf9dc7ccce"
   dependencies:
     bytewise "^1.1.0"
     cont "~1.0.0"
     deep-equal "~0.2.1"
     explain-error "~1.0.1"
-    flumedb "^0.3.1"
-    flumelog-offset "^3.0.2"
-    flumeview-level "^2.0.1"
-    flumeview-reduce "^1.0.4"
+    flumedb "^0.4.2"
+    flumelog-offset "^3.2.5"
+    flumeview-level "^2.0.5"
+    flumeview-reduce "^1.3.6"
     level "^1.7.0"
     level-codec "^6.2.0"
     level-peek "^2.0.1"
@@ -3003,7 +3035,7 @@ ssb-feed@^2.2.1:
     ssb-keys "^7.0.0"
     ssb-ref "^2.0.0"
 
-ssb-friends@^2.2.1, ssb-friends@^2.2.3:
+ssb-friends@^2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/ssb-friends/-/ssb-friends-2.2.3.tgz#4f6cccb2cc939d1407f29f9f4ea27ed380a82c60"
   dependencies:
@@ -3015,7 +3047,27 @@ ssb-friends@^2.2.1, ssb-friends@^2.2.3:
     pull-stream "^3.6.0"
     ssb-ref "^2.7.1"
 
-ssb-keys@7.0.10, ssb-keys@^7.0.0, ssb-keys@^7.0.9:
+ssb-friends@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/ssb-friends/-/ssb-friends-2.3.0.tgz#c8ec5ce4f5076bac13b0103de1b3ff99ab7966e3"
+  dependencies:
+    flumeview-reduce "^1.3.0"
+    graphreduce "^3.0.3"
+    obv "0.0.1"
+    pull-cont "^0.1.1"
+    pull-flatmap "0.0.1"
+    pull-stream "^3.6.0"
+    ssb-ref "^2.7.1"
+
+ssb-keys@7.0.12:
+  version "7.0.12"
+  resolved "https://registry.yarnpkg.com/ssb-keys/-/ssb-keys-7.0.12.tgz#95892e7676c54f912a52a158ecc15c5c401fd67d"
+  dependencies:
+    chloride "^2.2.7"
+    mkdirp "~0.5.0"
+    private-box "^0.2.1"
+
+ssb-keys@^7.0.0, ssb-keys@^7.0.9:
   version "7.0.10"
   resolved "https://registry.yarnpkg.com/ssb-keys/-/ssb-keys-7.0.10.tgz#55b7a59915f2e02cf337bb219e5fd4736c35e61a"
   dependencies:

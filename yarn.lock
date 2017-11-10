@@ -2,6 +2,15 @@
 # yarn lockfile v1
 
 
+"@staltz/medeadown@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@staltz/medeadown/-/medeadown-2.0.0.tgz#9328fa29bfd5fae99bf10663fd9740603ccb14dd"
+  dependencies:
+    abstract-leveldown "3.0.x"
+    keydir "^2.1.1"
+    leveldown-open "^1.0.3"
+    medea "^1.0.3"
+
 "@types/node@^6.0.46":
   version "6.0.83"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.83.tgz#dd022db01ac2c01c1057775e88ccffce96d1d6fe"
@@ -21,9 +30,9 @@ abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
 
-abstract-leveldown@2.4.1, abstract-leveldown@~2.4.0:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/abstract-leveldown/-/abstract-leveldown-2.4.1.tgz#b3bfedb884eb693a12775f0c55e9f0a420ccee64"
+abstract-leveldown@3.0.x:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/abstract-leveldown/-/abstract-leveldown-3.0.0.tgz#5cb89f958a44f526779d740d1440e743e0c30a57"
   dependencies:
     xtend "~4.0.0"
 
@@ -32,6 +41,12 @@ abstract-leveldown@~0.12.1:
   resolved "https://registry.yarnpkg.com/abstract-leveldown/-/abstract-leveldown-0.12.4.tgz#29e18e632e60e4e221d5810247852a63d7b2e410"
   dependencies:
     xtend "~3.0.0"
+
+abstract-leveldown@~2.4.0:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/abstract-leveldown/-/abstract-leveldown-2.4.1.tgz#b3bfedb884eb693a12775f0c55e9f0a420ccee64"
+  dependencies:
+    xtend "~4.0.0"
 
 abstract-leveldown@~2.6.1:
   version "2.6.1"
@@ -86,6 +101,10 @@ anymatch@^1.3.0:
 append-batch@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/append-batch/-/append-batch-0.0.1.tgz#9224858e556997ccc07f11f1ee9a128532aa0d25"
+
+append-stream@^1.1.0:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/append-stream/-/append-stream-1.2.2.tgz#36c6238133ffd4f92d4371782890a412da02df84"
 
 aproba@^1.0.3:
   version "1.1.2"
@@ -149,6 +168,10 @@ async-each@^1.0.0:
 async-single@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/async-single/-/async-single-1.0.3.tgz#a156607ee42dd9dacfe81a290c983343fd536eab"
+
+async@^0.9.0:
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/async/-/async-0.9.2.tgz#aea74d5e61c1f899613bf64bda66d4c78f2fd17d"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -280,6 +303,14 @@ browser-resolve@^1.7.0:
 browser-split@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/browser-split/-/browser-split-0.0.0.tgz#41419caef769755929dd518967d3eec0a6262771"
+
+buffer-crc32@~0.2.1:
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
+
+buffer-equal@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/buffer-equal/-/buffer-equal-0.0.1.tgz#91bc74b11ea405bc916bc6aa908faafa5b4aac4b"
 
 bufferutil@3.0.1:
   version "3.0.1"
@@ -546,6 +577,12 @@ css-what@2.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-2.1.0.tgz#9467d032c38cfaefb9f2d79501253062f87fa1bd"
 
+d@1:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/d/-/d-1.0.0.tgz#754bb5bfe55451da69a58b94d45f4c5b0462d58f"
+  dependencies:
+    es5-ext "^0.10.9"
+
 dashdash@^1.12.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
@@ -697,9 +734,59 @@ error-ex@^1.2.0:
   dependencies:
     is-arrayish "^0.2.1"
 
+es5-ext@^0.10.35, es5-ext@^0.10.9, es5-ext@~0.10.14:
+  version "0.10.35"
+  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.35.tgz#18ee858ce6a3c45c7d79e91c15fcca9ec568494f"
+  dependencies:
+    es6-iterator "~2.0.1"
+    es6-symbol "~3.1.1"
+
+es6-iterator@~2.0.1:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/es6-iterator/-/es6-iterator-2.0.3.tgz#a7de889141a05a94b0854403b2d0a0fbfa98f3b7"
+  dependencies:
+    d "1"
+    es5-ext "^0.10.35"
+    es6-symbol "^3.1.1"
+
+es6-map@^0.1.1:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/es6-map/-/es6-map-0.1.5.tgz#9136e0503dcc06a301690f0bb14ff4e364e949f0"
+  dependencies:
+    d "1"
+    es5-ext "~0.10.14"
+    es6-iterator "~2.0.1"
+    es6-set "~0.1.5"
+    es6-symbol "~3.1.1"
+    event-emitter "~0.3.5"
+
+es6-set@~0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/es6-set/-/es6-set-0.1.5.tgz#d2b3ec5d4d800ced818db538d28974db0a73ccb1"
+  dependencies:
+    d "1"
+    es5-ext "~0.10.14"
+    es6-iterator "~2.0.1"
+    es6-symbol "3.1.1"
+    event-emitter "~0.3.5"
+
+es6-symbol@3.1.1, es6-symbol@^3.1.1, es6-symbol@~3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/es6-symbol/-/es6-symbol-3.1.1.tgz#bf00ef4fdab6ba1b46ecb7b629b4c7ed5715cc77"
+  dependencies:
+    d "1"
+    es5-ext "~0.10.14"
+
 escape-string-regexp@^1.0.2:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
+
+event-emitter@~0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/event-emitter/-/event-emitter-0.3.5.tgz#df8c69eef1647923c7157b9ce83840610b02cc39"
+  dependencies:
+    d "1"
+    es5-ext "~0.10.14"
 
 execa@^0.5.0:
   version "0.5.1"
@@ -939,10 +1026,6 @@ fstream@^1.0.0, fstream@^1.0.10, fstream@^1.0.2:
     mkdirp ">=0.5 0"
     rimraf "2"
 
-functional-red-black-tree@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
-
 gauge@~2.7.3:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"
@@ -1128,10 +1211,6 @@ hyperscript@^1.4.7:
     browser-split "0.0.0"
     class-list "~0.1.0"
     html-element "~1.3.0"
-
-immediate@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/immediate/-/immediate-3.2.3.tgz#d140fa8f614659bd6541233097ddaac25cdd991c"
 
 increment-buffer@~1.0.0:
   version "1.0.1"
@@ -1354,6 +1433,12 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.3.6"
 
+keydir@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/keydir/-/keydir-2.1.1.tgz#a981f3e7f0c3c3751d435720e6ede3be6a25d3b7"
+  dependencies:
+    ltgt "^1.0.2"
+
 kind-of@^3.0.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
@@ -1448,6 +1533,10 @@ level@^1.4.0, level@^1.5.0, level@^1.7.0:
   dependencies:
     level-packager "~1.2.0"
     leveldown "~1.7.0"
+
+leveldown-open@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/leveldown-open/-/leveldown-open-1.0.3.tgz#8094fbef5b1b8c5252f3239ec14517e9f8665a02"
 
 leveldown@~1.7.0:
   version "1.7.2"
@@ -1549,11 +1638,15 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
+ltgt@^1.0.2:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/ltgt/-/ltgt-1.2.0.tgz#617707dc39f38294415e66a02f3c2705ac407866"
+
 ltgt@^2.1.2, ltgt@^2.1.3, ltgt@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/ltgt/-/ltgt-2.2.0.tgz#b65ba5fcb349a29924c8e333f7c6a5562f2e4842"
 
-ltgt@~2.1.1, ltgt@~2.1.3:
+ltgt@~2.1.1:
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/ltgt/-/ltgt-2.1.3.tgz#10851a06d9964b971178441c23c9e52698eece34"
 
@@ -1592,21 +1685,26 @@ mdmanifest@^1.0.4:
     remark-html "^2.0.2"
     word-wrap "^1.1.0"
 
+medea@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/medea/-/medea-1.0.3.tgz#d16365b315ef64d6cc8ecc8ec16db6442ff52583"
+  dependencies:
+    append-stream "^1.1.0"
+    async "^0.9.0"
+    buffer-crc32 "~0.2.1"
+    buffer-equal "0.0.1"
+    es6-map "^0.1.1"
+    mkdirp "^0.5.0"
+    monotonic-timestamp "0.0.8"
+    pidlockfile "^1.1.1"
+    rimraf "~2.2.2"
+    run-parallel "^1.0.0"
+
 mem@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/mem/-/mem-1.1.0.tgz#5edd52b485ca1d900fe64895505399a0dfa45f76"
   dependencies:
     mimic-fn "^1.0.0"
-
-memdown@1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/memdown/-/memdown-1.2.4.tgz#cd9a34aaf074d53445a271108eb4b8dd4ec0f27f"
-  dependencies:
-    abstract-leveldown "2.4.1"
-    functional-red-black-tree "^1.0.1"
-    immediate "^3.2.3"
-    inherits "~2.0.1"
-    ltgt "~2.1.3"
 
 micromatch@^2.1.5:
   version "2.3.11"
@@ -1691,6 +1789,10 @@ module-deps@^4.0.7:
     subarg "^1.0.0"
     through2 "^2.0.0"
     xtend "^4.0.0"
+
+monotonic-timestamp@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/monotonic-timestamp/-/monotonic-timestamp-0.0.8.tgz#67987d02a41c15f568b6c0a05885989dd2402ba0"
 
 monotonic-timestamp@~0.0.8, monotonic-timestamp@~0.0.9:
   version "0.0.9"
@@ -2074,6 +2176,10 @@ path@0.12.7, path@^0.12.7:
 performance-now@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
+
+pidlockfile@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/pidlockfile/-/pidlockfile-1.1.1.tgz#d67312fb326deeb45e5419a47c141877bd3cc98c"
 
 pify@^2.0.0:
   version "2.3.0"
@@ -2489,9 +2595,9 @@ rc@~0.5.4:
     minimist "~0.0.7"
     strip-json-comments "0.1.x"
 
-react-native-node@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-node/-/react-native-node-3.0.0.tgz#0783a28936bd595d72fbb9ec9b19b99d7b65e19e"
+react-native-node@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-node/-/react-native-node-3.2.0.tgz#a66d7ef56a5ff6294daba06f00d21d15bffb88ba"
   dependencies:
     cheerio "^1.0.0-rc.1"
     mkdirp "^0.5.1"
@@ -2690,7 +2796,7 @@ rimraf@2, rimraf@^2.4.2, rimraf@^2.5.1, rimraf@^2.6.1:
   dependencies:
     glob "^7.0.5"
 
-rimraf@~2.2.8:
+rimraf@~2.2.2, rimraf@~2.2.8:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
 
@@ -2699,6 +2805,10 @@ rimraf@~2.4.0:
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.4.5.tgz#ee710ce5d93a8fdb856fb5ea8ff0e2d75934b2da"
   dependencies:
     glob "^6.0.1"
+
+run-parallel@^1.0.0:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/run-parallel/-/run-parallel-1.1.6.tgz#29003c9a2163e01e2d2dfc90575f2c6c1d61a039"
 
 safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"

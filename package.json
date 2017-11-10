@@ -20,8 +20,8 @@
     "typescript": "^2.4.1"
   },
   "dependencies": {
+    "@staltz/medeadown": "2.0.0",
     "bufferutil": "3.0.1",
-    "memdown": "1.2.4",
     "mkdirp": "^0.5.1",
     "noderify": "3.0.2",
     "path": "0.12.7",

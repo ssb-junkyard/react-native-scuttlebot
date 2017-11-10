@@ -22,6 +22,7 @@
   "dependencies": {
     "bufferutil": "3.0.1",
     "memdown": "1.2.4",
+    "mkdirp": "^0.5.1",
     "noderify": "3.0.2",
     "path": "0.12.7",
     "pull-identify-filetype": "1.1.0",

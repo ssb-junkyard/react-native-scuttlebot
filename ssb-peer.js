@@ -2,13 +2,14 @@ var fs = require("fs");
 var path = require("path");
 var ssbKeys = require("ssb-keys");
 var serveBlobs = require("./serve-blobs");
+var mkdirp = require("mkdirp");
 
 var config = require("ssb-config/inject")();
 
 const filesPath = path.join(__dirname, "/files/");
 
 if (!fs.existsSync(path.join(filesPath, ".ssb"))) {
-  fs.mkdirSync(path.join(filesPath, ".ssb"));
+  mkdirp.sync(path.join(filesPath, ".ssb"));
 }
 const secretPath = path.join(filesPath, ".ssb/secret");
 const keys = (() => {

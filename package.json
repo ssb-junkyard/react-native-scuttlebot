@@ -20,7 +20,7 @@
     "typescript": "^2.4.1"
   },
   "dependencies": {
-    "@staltz/jsondown": "1.1.0",
+    "@staltz/jsondown": "1.1.1",
     "bufferutil": "3.0.1",
     "mkdirp": "^0.5.1",
     "noderify": "3.0.2",

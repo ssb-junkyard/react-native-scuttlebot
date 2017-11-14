@@ -1,17 +1,16 @@
-var fs = require("fs");
-var path = require("path");
-var ssbKeys = require("ssb-keys");
-var serveBlobs = require("./serve-blobs");
-var mkdirp = require("mkdirp");
+const fs = require("fs");
+const os = require("os");
+const path = require("path");
+const ssbKeys = require("ssb-keys");
+const serveBlobs = require("./serve-blobs");
+const mkdirp = require("mkdirp");
 
-var config = require("ssb-config/inject")();
-
-const filesPath = path.join(__dirname, "/files/");
-
-if (!fs.existsSync(path.join(filesPath, ".ssb"))) {
-  mkdirp.sync(path.join(filesPath, ".ssb"));
+const ssbPath = path.resolve(os.homedir(), '.ssb');
+if (!fs.existsSync(ssbPath)) {
+  mkdirp.sync(ssbPath);
 }
-const secretPath = path.join(filesPath, ".ssb/secret");
+const secretPath = path.join(ssbPath, "/secret");
+
 const keys = (() => {
   if (fs.existsSync(secretPath)) {
     const fileContents = fs.readFileSync(secretPath, "ascii");
@@ -24,7 +23,9 @@ const keys = (() => {
   }
 })();
 
-var manifest = {
+const config = require("ssb-config/inject")();
+
+const manifest = {
   auth: "async",
   address: "sync",
   manifest: "sync",
@@ -111,7 +112,7 @@ var manifest = {
   }
 };
 
-var createSbot = require("scuttlebot/index")
+const createSbot = require("scuttlebot/index")
   .use(require("scuttlebot/plugins/plugins"))
   .use(require("scuttlebot/plugins/master"))
   .use(require("scuttlebot/plugins/gossip"))
@@ -133,6 +134,6 @@ require("scuttlebot/plugins/plugins").loadUserPlugins(createSbot, config);
 
 // start server
 config.keys = keys;
-config.path = path.join(__dirname, "/files/.ssb");
-var sbot = createSbot(config);
+config.path = ssbPath;
+const sbot = createSbot(config);
 serveBlobs(sbot);

@@ -17,7 +17,10 @@ const replacements =
   "--replace.chloride=sodium-browserify-tweetnacl " +
   "--replace.sodium-chloride=sodium-browserify-tweetnacl " +
   "--replace.node-extend=xtend " +
-  "--replace.leveldown=@staltz/jsondown";
+  "--replace.leveldown=@staltz/jsondown " +
+  "--replace.runtimejs=noop2 " +
+  "--replace.fatfs=noop2 " +
+  "";
 const ssbPeerPath = path.join(__dirname, "ssb-peer.js");
 const bundleFilePath = path.join(__dirname, "bundle.js");
 const bundleDirPath = path.join(projectPath, "background-bundled");

@@ -6,9 +6,10 @@
   "license": "MIT",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "homepage": "https://github.com/ssbc/react-native-scuttlebot",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ssbc/react-native-scuttlebot.git"
+    "url": "https://github.com/ssbc/react-native-scuttlebot"
   },
   "scripts": {
     "compile": "tsc",

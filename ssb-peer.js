@@ -11,17 +11,7 @@ if (!fs.existsSync(ssbPath)) {
 }
 const secretPath = path.join(ssbPath, "/secret");
 
-const keys = (() => {
-  if (fs.existsSync(secretPath)) {
-    const fileContents = fs.readFileSync(secretPath, "ascii");
-    return JSON.parse(fileContents);
-  } else {
-    const generatedKeys = ssbKeys.generate();
-    const fileContents = JSON.stringify(generatedKeys, null, 2);
-    fs.writeFileSync(secretPath, fileContents, "ascii");
-    return generatedKeys;
-  }
-})();
+const keys = ssbKeys.loadOrCreateSync(secretPath);
 
 const config = require("ssb-config/inject")();
 

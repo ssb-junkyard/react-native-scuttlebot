@@ -14,7 +14,7 @@
   "scripts": {
     "compile": "tsc",
     "prepublishOnly": "npm run compile",
-    "install": "node patch-scuttlebot.js && ./insert-bundle.sh && cd ../../ && react-native link react-native-node"
+    "install": "./insert-bundle.sh && cd ../../ && react-native link react-native-node"
   },
   "devDependencies": {
     "@types/node": "^8.0.9",

@@ -9,6 +9,7 @@ RNNODE="$INNER_BINS/react-native-node"
 if [ ! -e "$RNNODE" ]; then
   RNNODE="$OUTER_BINS/react-native-node"
 fi
+PATCH_SCUTTLEBOT_BIN="$(pwd)/patch-scuttlebot.js"
 PROJECT="$(pwd)/../.."
 ORIG="$(pwd)/rnnodeapp"
 DEST="$PROJECT/rnnodeapp"
@@ -22,6 +23,11 @@ cp -r "$ORIG" "$DEST/../";
 cd "$DEST";
 yarn;
 
+# Setup native libraries and fix other libraries
+PREBUILT_PATH_1="$DEST/node_modules/leveldown-android-prebuilt/compiled"
+cp -R "$PREBUILT_PATH_1" "$DEST/";
+node "$PATCH_SCUTTLEBOT_BIN" "$DEST";
+
 # Minify the bundle
 cd "$DEST";
 $NODERIFY \
@@ -32,10 +38,6 @@ $NODERIFY \
    "$DEST/index.js" > "$DEST/_index.js";
 rm "$DEST/index.js";
 mv "$DEST/_index.js" "$DEST/index.js";
-
-# Setup native libraries
-PREBUILT_PATH_1="$DEST/node_modules/leveldown-android-prebuilt/compiled"
-cp -R "$PREBUILT_PATH_1" "$DEST/";
 
 # Pre-insert clean up
 rm -rf "$DEST/node_modules";

@@ -1,19 +1,12 @@
 var fs = require("fs");
 var path = require("path");
 
-var scuttlebotPathHere = path.join(__dirname, "./node_modules/scuttlebot");
-var scuttlebotPathAbove = path.join(__dirname, "../scuttlebot");
+var rnnodeappPath = process.argv[2];
+var scuttlebotPath = path.join(rnnodeappPath, "node_modules/scuttlebot");
 
-var existsHere = fs.existsSync(scuttlebotPathHere);
-var existsAbove = fs.existsSync(scuttlebotPathAbove);
-
-if (existsHere) {
-  patchApidocsFile(scuttlebotPathHere);
-}
-if (existsAbove) {
-  patchApidocsFile(scuttlebotPathAbove);
-}
-if (!existsHere && !existsAbove) {
+if (fs.existsSync(scuttlebotPath)) {
+  patchApidocsFile(scuttlebotPath);
+} else {
   throw new Error("Cannot find file scuttlebot/lib/apidocs.js to patch");
 }
 

@@ -10,6 +10,7 @@
     "sodium-browserify-tweetnacl": "0.2.3",
     "ssb-about": "0.1.x",
     "ssb-backlinks": "0.4.x",
+    "mime-types": "2.1.17",
     "ssb-contacts": "0.0.x",
     "ssb-friends": "^2.3.0",
     "ssb-keys": "7.0.12",

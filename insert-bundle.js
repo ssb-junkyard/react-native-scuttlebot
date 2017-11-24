@@ -22,10 +22,16 @@ const replacements =
 const ssbPeerPath = path.join(__dirname, "ssb-peer.js");
 const bundleFilePath = path.join(__dirname, "bundle.js");
 const bundleDirPath = path.join(projectPath, "background-bundled");
-const leveldownPrebuiltPath = path.join(
+let leveldownPrebuiltPath = path.join(
   __dirname,
   "node_modules/leveldown-android-prebuilt/compiled"
 );
+if (!fs.existsSync(leveldownPrebuiltPath)) {
+  leveldownPrebuiltPath = path.join(
+    projectPath,
+    "node_modules/leveldown-android-prebuilt/compiled"
+  );
+}
 
 execSync(
   `${noderifyBinPath} ${replacements} ${ssbPeerPath} > ${bundleFilePath}`,

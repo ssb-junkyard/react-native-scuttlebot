@@ -33,6 +33,7 @@ execSync(
 );
 execSync(`mkdir -p ${bundleDirPath}`);
 execSync(`cp ${bundleFilePath} ${bundleDirPath}/index.js`);
+execSync(`mkdir -p ${bundleDirPath}/compiled`);
 execSync(`cp -R ${leveldownPrebuiltPath} ${bundleDirPath}/compiled/`);
 execSync(`${rnnodeBinPath} insert ${bundleDirPath}`, { cwd: projectPath });
 execSync(`rm -rf ${bundleDirPath}`);

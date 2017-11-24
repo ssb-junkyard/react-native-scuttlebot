@@ -17,13 +17,15 @@ const replacements =
   "--replace.chloride=sodium-browserify-tweetnacl " +
   "--replace.sodium-chloride=sodium-browserify-tweetnacl " +
   "--replace.node-extend=xtend " +
-  "--replace.leveldown=@staltz/jsondown " +
-  "--replace.runtimejs=noop2 " +
-  "--replace.fatfs=noop2 " +
+  "--replace.leveldown=leveldown-android-prebuilt " +
   "";
 const ssbPeerPath = path.join(__dirname, "ssb-peer.js");
 const bundleFilePath = path.join(__dirname, "bundle.js");
 const bundleDirPath = path.join(projectPath, "background-bundled");
+const leveldownPrebuiltPath = path.join(
+  __dirname,
+  "node_modules/leveldown-android-prebuilt/compiled"
+);
 
 execSync(
   `${noderifyBinPath} ${replacements} ${ssbPeerPath} > ${bundleFilePath}`,
@@ -31,5 +33,6 @@ execSync(
 );
 execSync(`mkdir -p ${bundleDirPath}`);
 execSync(`cp ${bundleFilePath} ${bundleDirPath}/index.js`);
+execSync(`cp -R ${leveldownPrebuiltPath} ${bundleDirPath}/compiled/`);
 execSync(`${rnnodeBinPath} insert ${bundleDirPath}`, { cwd: projectPath });
 execSync(`rm -rf ${bundleDirPath}`);

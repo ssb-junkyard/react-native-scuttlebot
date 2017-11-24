@@ -21,14 +21,14 @@
     "typescript": "^2.4.1"
   },
   "dependencies": {
-    "@staltz/jsondown": "1.1.1",
+    "leveldown-android-prebuilt": "2.0.3",
     "bufferutil": "3.0.1",
     "mkdirp": "^0.5.1",
     "noderify": "3.0.2",
     "noop2": "2.0.0",
     "path": "0.12.7",
     "pull-identify-filetype": "1.1.0",
-    "react-native-node": "3.2.0",
+    "react-native-node": "3.3.0",
     "scuttlebot": "10.4.10",
     "sodium-browserify-tweetnacl": "0.2.3",
     "spawn-sync": "1.0.15",

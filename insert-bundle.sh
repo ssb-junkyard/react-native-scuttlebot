@@ -21,7 +21,7 @@ cp -r "$ORIG" "$DEST/../";
 
 # Install dependencies there
 cd "$DEST";
-yarn;
+npm i;
 
 # Setup native libraries and fix other libraries
 PREBUILT_PATH_1="$DEST/node_modules/leveldown-android-prebuilt/compiled"

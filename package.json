@@ -14,7 +14,7 @@
   "scripts": {
     "compile": "tsc",
     "prepublishOnly": "npm run compile",
-    "install": "./insert-bundle.sh && cd ../../ && react-native link react-native-node"
+    "xinstall": "./insert-bundle.sh && cd ../../ && react-native link react-native-node"
   },
   "devDependencies": {
     "@types/node": "^8.0.9",

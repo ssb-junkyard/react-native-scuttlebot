@@ -1,6 +1,6 @@
 {
   "name": "react-native-scuttlebot",
-  "version": "10.4.22",
+  "version": "10.4.23",
   "description": "Secure Scuttlebutt peer for React Native apps",
   "author": "Andre Staltz",
   "license": "MIT",
@@ -14,7 +14,7 @@
   "scripts": {
     "compile": "tsc",
     "prepublishOnly": "npm run compile",
-    "xinstall": "./insert-bundle.sh && cd ../../ && react-native link react-native-node"
+    "install": "./insert-bundle.sh && cd ../../ && react-native link react-native-node"
   },
   "devDependencies": {
     "@types/node": "^8.0.9",
